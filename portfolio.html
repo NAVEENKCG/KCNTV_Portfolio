@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KCN TV | Chellmachary Fibre Net — Portfolio &amp; Coverage</title>
+  <meta name="description" content="Explore KCN TV's 30+ years of fibre and cable infrastructure across Kadayanallur & Tenkasi. View our coverage, installations, service tiers, and customer results." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── RESET & VARIABLES ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-base: #FFFFFF;
+      --bg-surface: #F8FAFC;
+      --bg-elevated: #F1F5F9;
+      --border-card: rgba(30,41,59,0.10);
+      --accent: #C8102E;
+      --accent-yellow: #FFB800;
+      --accent-blue: #1E293B;
+      --text-primary: #1E293B;
+      --text-muted: #334155;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 999px;
+      --glow-accent: 0 4px 20px rgba(200,16,46,0.15);
+      --glow-accent-strong: 0 8px 32px rgba(200,16,46,0.25);
+      --ease-out-expo: cubic-bezier(0.16,1,0.3,1);
+      --spring: cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-base);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; font-family: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── SECTION COMMON ── */
+    .section {
+      padding: 96px 0;
+    }
+    @media (min-width: 768px) { .section { padding: 120px 0; } }
+    @media (min-width: 1024px) { .section { padding: 160px 0; } }
+
+    .section-eyebrow {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      opacity: 1;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), background 0.3s, border-color 0.3s;
+    }
+    .btn:active { transform: scale(0.96); }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #FFFFFF;
+      box-shadow: var(--glow-accent);
+    }
+    .btn-primary:hover {
+      box-shadow: var(--glow-accent-strong);
+      transform: translateY(-2px) scale(1.02);
+      background: #A50D26;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1.5px solid rgba(30,41,59,0.2);
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-lime {
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+    }
+    .btn-outline-lime:hover {
+      background: rgba(200,16,46,0.06);
+      transform: translateY(-2px);
+      box-shadow: var(--glow-accent);
+    }
+
+    /* ── BADGE ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+    }
+    .badge-lime {
+      background: rgba(200,16,46,0.08);
+      color: var(--accent);
+      border: 1px solid rgba(200,16,46,0.15);
+    }
+    .badge-yellow {
+      background: rgba(255,184,0,0.10);
+      color: #B8860B;
+      border: 1px solid rgba(255,184,0,0.25);
+    }
+    .badge-blue {
+      background: rgba(30,41,59,0.08);
+      color: var(--accent-blue);
+      border: 1px solid rgba(30,41,59,0.15);
+    }
+
+    /* ────────────────────────────────
+       1. STICKY HEADER
+    ──────────────────────────────── */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 40;
+      padding: 16px 0;
+      transition: padding 0.4s var(--ease-out-expo), background 0.4s, box-shadow 0.3s;
+      background: rgba(255,255,255,0.6);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+    }
+    .header.scrolled {
+      padding: 10px 0;
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(24px);
+    }
+
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .header-logo-main {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+    .header-logo-sub {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .header-nav {
+      display: none;
+      gap: 28px;
+    }
+    @media (min-width: 1024px) {
+      .header-nav { display: flex; }
+    }
+    .header-nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #475569;
+      transition: color 0.3s;
+      position: relative;
+    }
+    .header-nav a:hover { color: var(--accent); }
+    .header-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+      transition: width 0.4s var(--ease-out-expo);
+    }
+    .header-nav a:hover::after { width: 100%; }
+
+    .header-cta {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .header-cta { display: inline-flex; }
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      padding: 8px;
+    }
+    .hamburger span {
+      width: 22px; height: 2px;
+      background: #1E293B;
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (min-width: 1024px) { .hamburger { display: none; } }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 39;
+      background: rgba(255,255,255,0.97);
+      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(24px);
+      padding: 90px 24px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transform: translateY(-100%);
+      transition: transform 0.5s var(--ease-out-expo);
+    }
+    .mobile-menu.open { transform: translateY(0); }
+    .mobile-menu a {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      transition: color 0.3s, padding-left 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--accent); padding-left: 8px; }
+    .mobile-menu .btn {
+      margin-top: 16px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    /* ────────────────────────────────
+       2. HERO
+    ──────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+    .hero-orb {
+      position: absolute;
+      top: -10%; right: -8%;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(200,16,46,0.08) 0%, rgba(255,184,0,0.06) 40%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+      animation: orbPulse 6s ease-in-out infinite;
+    }
+    @keyframes orbPulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.12); opacity: 1; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(200,16,46,0.06);
+      border: 1px solid rgba(200,16,46,0.12);
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 28px;
+      animation: fadeInUp 0.8s var(--ease-out-expo) both;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      color: var(--text-primary);
+      max-width: 720px;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.8s var(--ease-out-expo) 0.1s both;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      animation: fadeInUp 0.8s var(--ease-out-expo) 0.2s both;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 56px;
+      animation: fadeInUp 0.8s var(--ease-out-expo) 0.3s both;
+    }
+
+    /* Stat strip */
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .hero-stat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      border: 1px solid rgba(30,41,59,0.10);
+      border-radius: var(--radius-pill);
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      opacity: 0;
+      animation: fadeInUp 0.6s var(--ease-out-expo) both;
+    }
+    .hero-stat:nth-child(1) { animation-delay: 0.4s; }
+    .hero-stat:nth-child(2) { animation-delay: 0.5s; }
+    .hero-stat:nth-child(3) { animation-delay: 0.6s; }
+    .hero-stat:nth-child(4) { animation-delay: 0.7s; }
+
+    .hero-stat-value {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--accent);
+    }
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ────────────────────────────────
+       3. COVERAGE / INFRASTRUCTURE
+    ──────────────────────────────── */
+    .coverage-grid {
+      display: grid;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    @media (min-width: 768px) {
+      .coverage-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .coverage-map {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-card);
+      min-height: 320px;
+      background: var(--bg-surface);
+    }
+    .coverage-map iframe {
+      width: 100%; height: 100%;
+      min-height: 320px;
+      border: none;
+      filter: none;
+    }
+
+    .coverage-areas {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .area-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .area-card:hover {
+      transform: translateX(6px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .area-card-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .area-card-meta {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Gallery strip */
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 40px;
+    }
+    @media (min-width: 768px) {
+      .gallery-strip { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .gallery-tile {
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #FFFFFF 0%, var(--bg-elevated) 100%);
+      border: 1px solid var(--border-card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 2.4rem;
+      transition: transform 0.4s var(--ease-out-expo), border-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .gallery-tile:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,16,46,0.2);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .gallery-tile-label {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ────────────────────────────────
+       4. BEFORE & AFTER
+    ──────────────────────────────── */
+    .ba-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    @media (min-width: 768px) {
+      .ba-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .ba-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .ba-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-card);
+      background: #FFFFFF;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .ba-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    }
+
+    .ba-card-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 20px 20px 0;
+      margin-bottom: 4px;
+    }
+
+    .ba-halves {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .ba-half {
+      padding: 16px 18px 20px;
+    }
+    .ba-half--before {
+      background: #F8FAFC;
+      border-right: 1px solid rgba(0,0,0,0.06);
+    }
+    .ba-half--after {
+      border-left: 2px solid var(--accent);
+    }
+
+    .ba-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 10px;
+    }
+    .ba-tag--before {
+      background: rgba(255,184,0,0.12);
+      color: #B8860B;
+    }
+    .ba-tag--after {
+      background: rgba(200,16,46,0.08);
+      color: var(--accent);
+    }
+
+    .ba-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .ba-list li {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .ba-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 7px;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+    }
+    .ba-half--before .ba-list li::before { background: #94A3B8; opacity: 0.6; }
+    .ba-half--after .ba-list li::before { background: var(--accent); }
+    .ba-half--after .ba-list li { color: var(--text-primary); }
+
+    /* ────────────────────────────────
+       5. RESULTS / CASE STUDY
+    ──────────────────────────────── */
+    .results-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    @media (min-width: 768px) {
+      .results-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .result-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.4s var(--ease-out-expo), border-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .result-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(200,16,46,0.2);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    }
+
+    .result-card blockquote {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text-primary);
+      font-style: italic;
+    }
+    .result-card blockquote::before { content: '"'; color: var(--accent); font-size: 1.4rem; }
+    .result-card blockquote::after { content: '"'; color: var(--accent); font-size: 1.4rem; }
+
+    .result-link {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.3s;
+    }
+    .result-link:hover { gap: 10px; }
+    .result-link span { transition: transform 0.3s; }
+    .result-link:hover span { transform: translateX(4px); }
+
+    /* ────────────────────────────────
+       6. SERVICE TIERS
+    ──────────────────────────────── */
+    .tiers-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    @media (min-width: 768px) {
+      .tiers-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .tier-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: transform 0.4s var(--ease-out-expo), border-color 0.3s, box-shadow 0.4s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .tier-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    }
+    .tier-card--featured {
+      border-color: rgba(200,16,46,0.25);
+    }
+    .tier-card--featured:hover {
+      box-shadow: 0 12px 40px rgba(200,16,46,0.12);
+    }
+
+    .tier-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tier-card-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.4rem;
+    }
+
+    .tier-card-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .tier-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+    .tier-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+    .tier-features li::before {
+      content: '✓';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(200,16,46,0.08);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ────────────────────────────────
+       7. PROCESS TIMELINE
+    ──────────────────────────────── */
+    .process-timeline {
+      display: grid;
+      gap: 24px;
+      margin-top: 56px;
+      position: relative;
+    }
+    @media (min-width: 768px) {
+      .process-timeline { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    }
+
+    /* Dashed connector line — desktop only */
+    @media (min-width: 768px) {
+      .process-timeline::before {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: calc(16.66% + 28px);
+        right: calc(16.66% + 28px);
+        height: 2px;
+        background: repeating-linear-gradient(90deg, rgba(200,16,46,0.25) 0, rgba(200,16,46,0.25) 8px, transparent 8px, transparent 16px);
+        z-index: 0;
+      }
+    }
+
+    .process-step {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .process-step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .process-step-number {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: rgba(200,16,46,0.06);
+      border: 2px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .process-step-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .process-step-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .process-step-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ────────────────────────────────
+       8. TESTIMONIALS
+    ──────────────────────────────── */
+    .testimonials-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 48px;
+    }
+    @media (min-width: 768px) {
+      .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .testimonial-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.4s var(--ease-out-expo), border-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(200,16,46,0.15);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    }
+
+    .testimonial-stars {
+      color: var(--accent-yellow);
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-style: italic;
+      flex-grow: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .testimonial-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .testimonial-location {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ────────────────────────────────
+       9. FAQ ACCORDION
+    ──────────────────────────────── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 48px;
+      max-width: 800px;
+    }
+
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: border-color 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .faq-item.open {
+      border-color: rgba(200,16,46,0.25);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: none;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 20px 24px;
+      text-align: left;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .faq-question:hover { color: var(--accent); }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--accent);
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s var(--ease-out-expo), padding 0.4s;
+    }
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ────────────────────────────────
+       10. FINAL CTA
+    ──────────────────────────────── */
+    .final-cta {
+      background: #1E293B;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #FFFFFF;
+    }
+    .final-cta .section-title,
+    .final-cta .final-cta-headline { color: #FFFFFF; }
+    .final-cta .final-cta-sub { color: rgba(255,255,255,0.7); }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(200,16,46,0.12) 0%, transparent 60%);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .final-cta .container { position: relative; z-index: 1; }
+
+    .final-cta-headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .final-cta-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-cta-large {
+      font-size: 1.1rem;
+      padding: 18px 40px;
+    }
+    .btn-cta-large:hover {
+      transform: translateY(-4px) scale(1.04);
+    }
+
+    /* ────────────────────────────────
+       11. FOOTER
+    ──────────────────────────────── */
+    .footer {
+      background: #1E293B;
+      border-top: none;
+      padding: 64px 0 0;
+      color: #FFFFFF;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 40px;
+    }
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: 1.4fr 1fr 1.2fr; }
+    }
+
+    .footer-brand-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+    .footer-brand-tagline {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.3s, padding-left 0.3s;
+    }
+    .footer-links a:hover { color: #FFB800; padding-left: 4px; }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-contact-item {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+    }
+    .footer-contact-label {
+      font-weight: 600;
+      color: #FFFFFF;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 48px;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ── SCROLL-REVEAL UTILITY ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .hero-orb { animation: none; }
+      .reveal { opacity: 1; transform: none; }
+      .process-step { opacity: 1; transform: none; }
+      .hero-eyebrow, .hero-headline, .hero-sub, .hero-ctas, .hero-stat {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* ── SKIP-TO-CONTENT ── */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 4px;
+      z-index: 100;
+      background: var(--accent);
+      color: #FFFFFF;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .skip-link:focus {
+      left: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- ═══════════════════════════════
+       1. STICKY HEADER
+  ═══════════════════════════════ -->
+  <header class="header" id="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="header-logo" aria-label="KCN TV — Back to Home">
+        <span class="header-logo-main">KCN TV</span>
+        <span class="header-logo-sub">| Chellmachary Fibre Net</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="#coverage">Coverage</a>
+        <a href="#before-after">Before &amp; After</a>
+        <a href="#service-areas">Service Areas</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="#contact-cta" class="btn btn-primary header-cta" id="header-cta">Check Availability</a>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="#coverage">Coverage</a>
+    <a href="#before-after">Before &amp; After</a>
+    <a href="#service-areas">Service Areas</a>
+    <a href="#process">Process</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact-cta" class="btn btn-primary">Check Availability</a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════
+       2. HERO
+  ═══════════════════════════════ -->
+  <main id="main-content">
+  <section class="hero section">
+    <div class="hero-orb" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <div class="hero-eyebrow">📡 30+ Years of Real Infrastructure, Real Results</div>
+
+      <h1 class="hero-headline">See the Network Behind<br>30 Years of Connection.</h1>
+
+      <p class="hero-sub">From copper-era cable lines to modern fibre-optic infrastructure — explore how KCN TV has built and upgraded connectivity across Kadayanallur and Tenkasi.</p>
+
+      <div class="hero-ctas">
+        <a href="#coverage" class="btn btn-primary">View Our Coverage</a>
+        <a href="#before-after" class="btn btn-outline">See Before &amp; After</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-value">30+</span>
+          <span class="hero-stat-label">Years Operating</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">2</span>
+          <span class="hero-stat-label">Districts Covered</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">3.8★</span>
+          <span class="hero-stat-label">Customer Rating</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">150 Mbps</span>
+          <span class="hero-stat-label">Max Speed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       3. COVERAGE / INFRASTRUCTURE
+  ═══════════════════════════════ -->
+  <section class="section" id="coverage">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">Infrastructure</p>
+        <h2 class="section-title">Our Network Footprint</h2>
+        <p class="section-subtitle">Real areas, real installations — built and maintained by our local team.</p>
+      </div>
+
+      <div class="coverage-grid reveal">
+        <!-- Map -->
+        <div class="coverage-map">
+          <iframe
+            src="https://maps.google.com/maps?q=Melakadayanallur,+Kadayanallur,+Tamil+Nadu+627751&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="KCN TV Coverage Map — Kadayanallur & Tenkasi"
+          ></iframe>
+        </div>
+
+        <!-- Area Cards -->
+        <div class="coverage-areas">
+          <article class="area-card">
+            <div>
+              <div class="area-card-name">Melakadayanallur</div>
+              <div class="area-card-meta">
+                <span class="badge badge-lime">Fibre + Cable</span>
+                <span class="badge badge-lime">● Live</span>
+              </div>
+            </div>
+          </article>
+          <article class="area-card">
+            <div>
+              <div class="area-card-name">Kadayanallur Town</div>
+              <div class="area-card-meta">
+                <span class="badge badge-lime">Fibre + Cable</span>
+                <span class="badge badge-lime">● Live</span>
+              </div>
+            </div>
+          </article>
+          <article class="area-card">
+            <div>
+              <div class="area-card-name">Tenkasi District</div>
+              <div class="area-card-meta">
+                <span class="badge badge-blue">Cable Only</span>
+                <span class="badge badge-yellow">● Expanding</span>
+              </div>
+            </div>
+          </article>
+          <article class="area-card">
+            <div>
+              <div class="area-card-name">Surrounding Villages</div>
+              <div class="area-card-meta">
+                <span class="badge badge-blue">Cable Only</span>
+                <span class="badge badge-yellow">● Expanding</span>
+              </div>
+            </div>
+          </article>
+          <article class="area-card">
+            <div>
+              <div class="area-card-name">Sankarankovil Belt</div>
+              <div class="area-card-meta">
+                <span class="badge badge-blue">Fibre Expanding</span>
+                <span class="badge badge-yellow">● Expanding</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Gallery Strip -->
+      <div class="gallery-strip reveal">
+        <div class="gallery-tile">
+          <span>🏗️</span>
+          <span class="gallery-tile-label">Tower Install</span>
+        </div>
+        <div class="gallery-tile">
+          <span>📡</span>
+          <span class="gallery-tile-label">Dish Setup</span>
+        </div>
+        <div class="gallery-tile">
+          <span>🔌</span>
+          <span class="gallery-tile-label">Fibre Splicing</span>
+        </div>
+        <div class="gallery-tile">
+          <span>🛠️</span>
+          <span class="gallery-tile-label">Technician at Work</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       4. BEFORE & AFTER
+  ═══════════════════════════════ -->
+  <section class="section" id="before-after" style="background: #F8FAFC;">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">Signal Upgrade</p>
+        <h2 class="section-title">Before KCN TV vs. After KCN TV</h2>
+        <p class="section-subtitle">From patchy analog signal and slow internet to crystal-clear HD and fibre-fast speeds.</p>
+      </div>
+
+      <div class="ba-grid reveal">
+        <!-- Card 1: Cable TV Quality -->
+        <article class="ba-card">
+          <h3 class="ba-card-title">Cable TV Quality</h3>
+          <div class="ba-halves">
+            <div class="ba-half ba-half--before">
+              <span class="ba-tag ba-tag--before">Before</span>
+              <ul class="ba-list">
+                <li>Analog signal, frequent disruption</li>
+                <li>Limited channel selection</li>
+                <li>Ghosting &amp; static noise</li>
+              </ul>
+            </div>
+            <div class="ba-half ba-half--after">
+              <span class="ba-tag ba-tag--after">After</span>
+              <ul class="ba-list">
+                <li>Full HD Digital Signal</li>
+                <li>300+ channels available</li>
+                <li>Crystal-clear picture &amp; sound</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Internet Speed -->
+        <article class="ba-card">
+          <h3 class="ba-card-title">Internet Speed</h3>
+          <div class="ba-halves">
+            <div class="ba-half ba-half--before">
+              <span class="ba-tag ba-tag--before">Before</span>
+              <ul class="ba-list">
+                <li>Shared broadband, under 5 Mbps</li>
+                <li>Frequent disconnections</li>
+                <li>Buffering during peak hours</li>
+              </ul>
+            </div>
+            <div class="ba-half ba-half--after">
+              <span class="ba-tag ba-tag--after">After</span>
+              <ul class="ba-list">
+                <li>Dedicated fibre line, up to 150 Mbps</li>
+                <li>Stable 24/7 connection</li>
+                <li>Seamless 4K streaming</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Service Reliability -->
+        <article class="ba-card">
+          <h3 class="ba-card-title">Service Reliability</h3>
+          <div class="ba-halves">
+            <div class="ba-half ba-half--before">
+              <span class="ba-tag ba-tag--before">Before</span>
+              <ul class="ba-list">
+                <li>Long wait times for service calls</li>
+                <li>No local technician</li>
+                <li>Multi-day outage resolution</li>
+              </ul>
+            </div>
+            <div class="ba-half ba-half--after">
+              <span class="ba-tag ba-tag--after">After</span>
+              <ul class="ba-list">
+                <li>Same-day local technician support</li>
+                <li>Dedicated area representatives</li>
+                <li>48-hour resolution guarantee</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       5. RESULTS / CASE STUDY
+  ═══════════════════════════════ -->
+  <section class="section" id="results">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">Case Studies</p>
+        <h2 class="section-title">How We've Upgraded Local Connectivity</h2>
+      </div>
+
+      <div class="results-grid reveal">
+        <article class="result-card">
+          <span class="badge badge-lime">Infrastructure Upgrade</span>
+          <blockquote>Melakadayanallur went from single-channel cable to full fibre broadband in under 2 years.</blockquote>
+          <a href="#contact-cta" class="result-link">Learn more <span>→</span></a>
+        </article>
+
+        <article class="result-card">
+          <span class="badge badge-yellow">New Fibre Rollout</span>
+          <blockquote>Kadayanallur Town now has dedicated fibre lines reaching over 500 households with consistent 150 Mbps speeds.</blockquote>
+          <a href="#contact-cta" class="result-link">Learn more <span>→</span></a>
+        </article>
+
+        <article class="result-card">
+          <span class="badge badge-blue">Service Expansion</span>
+          <blockquote>Villages along the Sankarankovil belt are now connected with cable TV, with fibre rollout planned for Q3 2026.</blockquote>
+          <a href="#contact-cta" class="result-link">Learn more <span>→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       6. SERVICE TIERS
+  ═══════════════════════════════ -->
+  <section class="section" id="service-areas" style="background: #F8FAFC;">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">Packages</p>
+        <h2 class="section-title">What's Available in Your Area</h2>
+        <p class="section-subtitle">Coverage tiers across Kadayanallur &amp; Tenkasi — check what's live near you.</p>
+      </div>
+
+      <div class="tiers-grid reveal">
+        <!-- Tier 1 -->
+        <article class="tier-card">
+          <div class="tier-card-header">
+            <h3 class="tier-card-name">Cable TV Coverage</h3>
+            <span class="badge badge-blue">Available in All Areas</span>
+          </div>
+          <p class="tier-card-desc">Full digital cable TV access across every served village and town in our network.</p>
+          <ul class="tier-features">
+            <li>300+ channels available</li>
+            <li>HD quality</li>
+            <li>Same-day installation</li>
+            <li>Local technician support</li>
+          </ul>
+          <a href="#contact-cta" class="btn btn-outline-lime">Check My Area</a>
+        </article>
+
+        <!-- Tier 2 — Featured -->
+        <article class="tier-card tier-card--featured">
+          <div class="tier-card-header">
+            <h3 class="tier-card-name">Fibre Net Coverage</h3>
+            <span class="badge badge-lime">Expanding Fast</span>
+          </div>
+          <span class="badge badge-blue" style="align-self:flex-start;">Available in Core Zones</span>
+          <p class="tier-card-desc">High-speed fibre internet currently live in Melakadayanallur &amp; Kadayanallur Town, expanding monthly.</p>
+          <ul class="tier-features">
+            <li>Up to 150 Mbps</li>
+            <li>Unlimited data plans</li>
+            <li>Free installation</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#contact-cta" class="btn btn-primary">Check Fibre Availability</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       7. PROCESS TIMELINE
+  ═══════════════════════════════ -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">How It Works</p>
+        <h2 class="section-title">How We Bring KCN TV to Your Home</h2>
+      </div>
+
+      <div class="process-timeline">
+        <article class="process-step" data-step>
+          <div class="process-step-number">01</div>
+          <div class="process-step-icon">📋</div>
+          <h3 class="process-step-title">Site Survey</h3>
+          <p class="process-step-desc">Our technician visits your location to check signal feasibility and plan the best connection route.</p>
+        </article>
+
+        <article class="process-step" data-step>
+          <div class="process-step-number">02</div>
+          <div class="process-step-icon">🔧</div>
+          <h3 class="process-step-title">Installation</h3>
+          <p class="process-step-desc">We run the fibre or cable line, install your set-top box or router, and test signal quality on-site.</p>
+        </article>
+
+        <article class="process-step" data-step>
+          <div class="process-step-number">03</div>
+          <div class="process-step-icon">✅</div>
+          <h3 class="process-step-title">Activation</h3>
+          <p class="process-step-desc">Your connection goes live the same day, with a follow-up check within 48 hours to ensure everything's working perfectly.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       8. TESTIMONIALS
+  ═══════════════════════════════ -->
+  <section class="section" id="reviews" style="background: #F8FAFC;">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">Social Proof</p>
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+
+      <div class="testimonials-grid reveal">
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">"Switched from a patchy cable connection to KCN's fibre line — completely different experience. Streaming is smooth, no buffering even during evenings."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Rajesh Kumar</span>
+            <span class="testimonial-location">Kadayanallur</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">"KCN TV's local technician came within 2 hours of my call. No other provider in this area gives that kind of support. Been a customer for 12 years."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Priya Lakshmi</span>
+            <span class="testimonial-location">Melakadayanallur</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testimonial-text">"The fibre upgrade was free and done in a single morning. My kids can attend online classes without any lag now. Very happy with the service."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Mohammed Anwar</span>
+            <span class="testimonial-location">Tenkasi</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       9. FAQ ACCORDION
+  ═══════════════════════════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">Questions</p>
+        <h2 class="section-title">Coverage &amp; Installation FAQs</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item" id="faq-1">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+            How do I check if KCN TV is available in my area?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-1">
+            <div class="faq-answer-inner">
+              You can call our office directly or use the "Check Availability" button on this page. Our team will verify coverage for your exact location and get back to you within 24 hours. We cover Kadayanallur, Tenkasi, and surrounding villages.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+            How long does installation take once I sign up?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-2">
+            <div class="faq-answer-inner">
+              For areas with existing infrastructure, installation is typically completed within 1 working day. For new fibre line runs, it may take 2–3 days depending on distance and site conditions. We always aim for same-day activation once the line is installed.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+            Do I need to switch my existing set-top box?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-3">
+            <div class="faq-answer-inner">
+              If you're upgrading to our digital HD service, we'll provide a new set-top box as part of the installation. If you already have a compatible box from KCN TV, no swap is needed. Our technician will check compatibility during the site survey.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-4">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+            What happens if there's a signal issue after installation?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-4">
+            <div class="faq-answer-inner">
+              Call our local support line and a technician will be dispatched — typically within 2–4 hours for in-town locations. We also perform a follow-up check within 48 hours of every new installation to catch any early issues.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-5">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+            Can I upgrade from Cable TV to Fibre Net later?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-5">
+            <div class="faq-answer-inner">
+              Absolutely. Many of our customers started with cable TV and upgraded to fibre when it became available in their area. The upgrade is free of charge — we'll run a new fibre line and install your router at no additional installation cost.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════
+       10. FINAL CTA
+  ═══════════════════════════════ -->
+  <section class="section final-cta" id="contact-cta">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="final-cta-headline">Ready to See KCN TV in Your Area?</h2>
+        <p class="final-cta-sub">Get a free site check and find out what's available near you.</p>
+        <a href="#contact-cta" class="btn btn-primary btn-cta-large">Check My Availability</a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+
+  <!-- ═══════════════════════════════
+       11. FOOTER
+  ═══════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div>
+          <div class="footer-brand-name">KCN TV</div>
+          <p class="footer-brand-tagline">Connecting Kadayanallur &amp; Tenkasi since 1994.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <nav aria-label="Footer navigation">
+          <div class="footer-heading">Quick Links</div>
+          <div class="footer-links">
+            <a href="#coverage">Coverage</a>
+            <a href="#before-after">Before &amp; After</a>
+            <a href="#service-areas">Service Areas</a>
+            <a href="#process">Process</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#faq">FAQ</a>
+            <a href="index.html">← Back to Home</a>
+          </div>
+        </nav>
+
+        <!-- Contact -->
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <div class="footer-contact-label">Address</div>
+              64, Vadakathi Amman Kovil Street,<br>Melakadayanallur, Kadayanallur – 627751
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-label">Hours</div>
+              9 AM – 7 PM Daily
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-label">Payment Methods</div>
+              Cash, Cheque, DD
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 KCN TV (Chellmachary Fibre Net). All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ── Header scroll behavior ── */
+      const header = document.getElementById('site-header');
+      let lastScroll = 0;
+
+      function onScroll() {
+        const scrollY = window.scrollY;
+        if (scrollY > 80) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        lastScroll = scrollY;
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ── Mobile menu ── */
+      const hamburger = document.getElementById('hamburger-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      hamburger.addEventListener('click', function () {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+      });
+
+      // Close mobile menu on link click
+      mobileMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          mobileMenu.classList.remove('open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      /* ── FAQ Accordion ── */
+      document.querySelectorAll('.faq-question').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const item = btn.parentElement;
+          const answer = item.querySelector('.faq-answer');
+          const inner = answer.querySelector('.faq-answer-inner');
+          const isOpen = item.classList.contains('open');
+
+          // Close all other items
+          document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+            if (openItem !== item) {
+              openItem.classList.remove('open');
+              openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+              openItem.querySelector('.faq-answer').style.maxHeight = '0';
+            }
+          });
+
+          if (isOpen) {
+            item.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+            answer.style.maxHeight = '0';
+          } else {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+            answer.style.maxHeight = inner.scrollHeight + 'px';
+          }
+        });
+      });
+
+      /* ── Scroll reveal (IntersectionObserver) ── */
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!prefersReducedMotion) {
+        const revealObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '-60px' }
+        );
+
+        document.querySelectorAll('.reveal').forEach(function (el) {
+          revealObserver.observe(el);
+        });
+
+        /* Process steps staggered reveal */
+        const stepObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                // Stagger siblings
+                const steps = entry.target.parentElement.querySelectorAll('[data-step]');
+                steps.forEach(function (step, i) {
+                  setTimeout(function () {
+                    step.classList.add('visible');
+                  }, i * 120);
+                });
+                stepObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15, rootMargin: '-80px' }
+        );
+
+        const firstStep = document.querySelector('[data-step]');
+        if (firstStep) stepObserver.observe(firstStep);
+      } else {
+        // Reduced motion: show everything immediately
+        document.querySelectorAll('.reveal, .process-step').forEach(function (el) {
+          el.classList.add('visible');
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>
