@@ -1,4 +1,5 @@
 {
+  "name": "kcntv-portfolio",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
