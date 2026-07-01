@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#050A18" />
+  <meta name="theme-color" content="#FFFFFF" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="format-detection" content="telephone=no" />
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet" />
 
   <style>
@@ -27,38 +27,8 @@
       box-sizing: border-box;
     }
 
-    :root,
-    [data-theme="dark-corporate"] {
-      /* ── DEFAULT THEME: DARK CORPORATE FLAGSHIP (#050A18 Base + Tech & High-Speed Typography) ── */
-      --bg-base: #050A18;
-      --bg-surface: #0D1526;
-      --bg-elevated: #152035;
-      --border-card: rgba(255, 255, 255, 0.10);
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --accent: #FFB800;
-      --accent-yellow: #C8102E;
-      --accent-blue: #4D8DFF;
-      --accent-dim: rgba(255, 184, 0, 0.10);
-      --accent-border: rgba(255, 184, 0, 0.28);
-      --text-primary: #F8FAFC;
-      --text-muted: rgba(248, 250, 252, 0.68);
-      --text-on-accent: #050A18;
-      --nav-bg: rgba(13, 21, 38, 0.80);
-      --nav-border: rgba(255, 255, 255, 0.08);
-      --glow-accent: 0 0 24px rgba(255, 184, 0, 0.25);
-      --glow-accent-strong: 0 0 40px rgba(255, 184, 0, 0.35);
-      --font-display: 'Montserrat', sans-serif;
-      --font-body: 'Open Sans', sans-serif;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --radius-pill: 999px;
-      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-      --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    [data-theme="corporate-classic"] {
-      /* ── THEME 1: THE CORPORATE CLASSIC (Matches Logo exactly) ── */
+    :root {
+      /* ── CORPORATE CLASSIC THEME (Deep Crimson + Warm White) ── */
       --bg-base: #FFFFFF;
       --bg-surface: #F8FAFC;
       --bg-elevated: #F1F5F9;
@@ -72,58 +42,18 @@
       --text-primary: #1E293B;
       --text-muted: rgba(30, 41, 59, 0.68);
       --text-on-accent: #FFFFFF;
-      --nav-bg: rgba(255, 255, 255, 0.88);
+      --nav-bg: rgba(255, 255, 255, 0.92);
       --nav-border: rgba(30, 41, 59, 0.10);
       --glow-accent: 0 10px 30px rgba(200, 16, 46, 0.15);
       --glow-accent-strong: 0 15px 40px rgba(200, 16, 46, 0.28);
       --font-display: 'Inter', sans-serif;
       --font-body: 'Roboto', sans-serif;
-    }
-
-    [data-theme="modern-fiber"] {
-      /* ── THEME 2: TECH & HIGH-SPEED FIBER (High-speed Gigabit & Digital Optics) ── */
-      --bg-base: #060C1E;
-      --bg-surface: #0C1633;
-      --bg-elevated: #13224B;
-      --border-card: rgba(0, 216, 255, 0.16);
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --accent: #00D8FF;
-      --accent-yellow: #FFD400;
-      --accent-blue: #38BDF8;
-      --accent-dim: rgba(0, 216, 255, 0.12);
-      --accent-border: rgba(0, 216, 255, 0.35);
-      --text-primary: #F8FAFC;
-      --text-muted: rgba(248, 250, 252, 0.72);
-      --text-on-accent: #060C1E;
-      --nav-bg: rgba(12, 22, 51, 0.85);
-      --nav-border: rgba(0, 216, 255, 0.18);
-      --glow-accent: 0 0 28px rgba(0, 216, 255, 0.25);
-      --glow-accent-strong: 0 0 45px rgba(0, 216, 255, 0.40);
-      --font-display: 'Montserrat', sans-serif;
-      --font-body: 'Open Sans', sans-serif;
-    }
-
-    [data-theme="clean-minimalist"] {
-      /* ── THEME 3: CLEAN & MINIMALIST (Light & Approachable) ── */
-      --bg-base: #FFFFFF;
-      --bg-surface: #FAFAFA;
-      --bg-elevated: #F2F4F7;
-      --border-card: rgba(52, 64, 84, 0.12);
-      --border-subtle: rgba(52, 64, 84, 0.08);
-      --accent: #D92D20;
-      --accent-yellow: #1DBF73;
-      --accent-blue: #344054;
-      --accent-dim: rgba(217, 45, 32, 0.08);
-      --accent-border: rgba(217, 45, 32, 0.25);
-      --text-primary: #1D2939;
-      --text-muted: rgba(52, 64, 84, 0.68);
-      --text-on-accent: #FFFFFF;
-      --nav-bg: rgba(255, 255, 255, 0.88);
-      --nav-border: rgba(52, 64, 84, 0.10);
-      --glow-accent: 0 10px 30px rgba(217, 45, 32, 0.15);
-      --glow-accent-strong: 0 15px 40px rgba(217, 45, 32, 0.25);
-      --font-display: 'Poppins', sans-serif;
-      --font-body: 'Lato', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 999px;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     html {
@@ -1826,75 +1756,7 @@
       font-size: 0.85rem;
     }
 
-    /* ── THEME STUDIO FLOATING BAR ── */
-    .theme-studio {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 999;
-      background: var(--nav-bg);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--border-card);
-      padding: 8px 14px;
-      border-radius: var(--radius-pill);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      max-width: 95vw;
-      overflow-x: auto;
-      transition: all 0.4s var(--ease-out-expo);
-    }
-
-    .theme-studio-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-
-    .theme-studio-buttons {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .theme-btn {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: transparent;
-      border: 1px solid transparent;
-      padding: 6px 12px;
-      border-radius: var(--radius-pill);
-      font-family: var(--font-body);
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      cursor: pointer;
-      transition: all 0.3s var(--ease-out-expo);
-      white-space: nowrap;
-    }
-
-    .theme-btn:hover {
-      background: var(--bg-surface);
-    }
-
-    .theme-btn.active {
-      background: var(--accent);
-      color: var(--text-on-accent);
-      box-shadow: var(--glow-accent);
-    }
-
-    .theme-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      display: inline-block;
+    /* ── (Theme Studio removed — single corporate theme) ── 
     /* ────────────────────────────────
        13. PRODUCTION HARDENING & RESPONSIVENESS
     ──────────────────────────────── */
@@ -1914,7 +1776,7 @@
     }
 
     a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-      outline: 2px solid #C6FF3D !important;
+      outline: 2px solid var(--accent) !important;
       outline-offset: 3px !important;
     }
 
@@ -2021,34 +1883,7 @@
   </style>
 </head>
 
-<body data-theme="modern-fiber">
-
-  <!-- 🎨 THEME STUDIO FLOATING UI SWITCHER -->
-  <div class="theme-studio" role="region" aria-label="Theme Color Switcher">
-    <div class="theme-studio-label">🎨 Color Theme:</div>
-    <div class="theme-studio-buttons">
-      <button class="theme-btn" data-set-theme="corporate-classic"
-        title="Theme 1: Corporate Standard (Inter & Roboto)">
-        <span class="theme-dot" style="background:#C8102E;"></span>
-        <span class="theme-name">1. Corporate Standard</span>
-      </button>
-      <button class="theme-btn active" data-set-theme="modern-fiber"
-        title="Theme 2: Tech & High-Speed (Montserrat & Open Sans)">
-        <span class="theme-dot" style="background:#00D8FF; border: 1.5px solid #FFD400;"></span>
-        <span class="theme-name">⚡ 2. Tech &amp; High-Speed</span>
-      </button>
-      <button class="theme-btn" data-set-theme="clean-minimalist"
-        title="Theme 3: Sleek & Premium (Poppins & Lato)">
-        <span class="theme-dot" style="background:#D92D20;"></span>
-        <span class="theme-name">3. Sleek &amp; Premium</span>
-      </button>
-      <button class="theme-btn" data-set-theme="dark-corporate"
-        title="Theme 4: Dark Tech & High-Speed Flagship (Montserrat & Open Sans)">
-        <span class="theme-dot" style="background:#050A18;"></span>
-        <span class="theme-name">🌙 Dark Flagship</span>
-      </button>
-    </div>
-  </div>
+<body>
 
   <!-- Skip to content -->
   <a href="#main-content" class="skip-link">Skip to content</a>
@@ -2868,28 +2703,7 @@
         if (tl) tl.classList.add('line-visible');
       }
 
-      /* ── THEME STUDIO SWITCHER LOGIC ── */
-      const themeButtons = document.querySelectorAll('[data-set-theme]');
-      themeButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const theme = btn.getAttribute('data-set-theme');
-          document.body.setAttribute('data-theme', theme);
-          themeButtons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          try {
-            localStorage.setItem('kcn_portfolio_theme', theme);
-          } catch (e) { }
-        });
-      });
-      try {
-        const savedTheme = localStorage.getItem('kcn_portfolio_theme');
-        if (savedTheme) {
-          document.body.setAttribute('data-theme', savedTheme);
-          themeButtons.forEach(b => {
-            b.classList.toggle('active', b.getAttribute('data-set-theme') === savedTheme);
-          });
-        }
-      } catch (e) { }
+
 
     })();
   </script>
