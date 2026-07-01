@@ -1,6 +1,6 @@
 {
   "name": "kcntv-portfolio",
-  "alias": ["kcntv.vercel.app"],
+  "alias": ["kcntv-hd.vercel.app", "kcntv-portfolio.vercel.app"],
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
