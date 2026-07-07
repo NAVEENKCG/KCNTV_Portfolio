@@ -1737,6 +1737,11 @@
         transform: none;
       }
 
+      .plans-summary-bar {
+        opacity: 1;
+        transform: none;
+      }
+
       body::after {
         opacity: 0;
       }
@@ -1813,7 +1818,7 @@
     }
 
     @media (hover: none) {
-      .area-card:hover, .gallery-tile:hover, .ba-card:hover, .result-card:hover, .tier-card:hover, .tier-card--featured:hover, .testimonial-card:hover, .btn-cta-large:hover, .btn:hover {
+      .area-card:hover, .gallery-tile:hover, .ba-card:hover, .result-card:hover, .tier-card:hover, .tier-card--featured:hover, .testimonial-card:hover, .btn-cta-large:hover, .btn:hover, .speed-tile:hover, .pack-card:hover, .plans-trust-chip:hover, .plans-support-card:hover {
         transform: none !important;
         box-shadow: none !important;
       }
@@ -1879,6 +1884,485 @@
         flex-wrap: nowrap;
       }
     }
+
+    /* ────────────────────────────────
+       PLANS SECTION
+    ──────────────────────────────── */
+    .plans-section {
+      position: relative;
+    }
+
+    /* Trust stat row */
+    .plans-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .plans-trust-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-pill);
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: var(--font-display);
+      color: var(--text-primary);
+      transition: transform 0.4s var(--ease-out-expo), border-color 0.3s;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .plans-trust-chip:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-border);
+    }
+
+    .plans-trust-chip .chip-value {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    /* Step label row */
+    .plans-step-label {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .plans-step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(200, 16, 46, 0.08);
+      border: 2px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .plans-step-text {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .plans-step-container {
+      margin-bottom: 56px;
+    }
+
+    /* Speed tiles — horizontal scroll on mobile, grid on desktop */
+    .speed-tiles {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--accent) transparent;
+    }
+
+    .speed-tiles::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .speed-tiles::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .speed-tiles::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    @media (min-width: 1024px) {
+      .speed-tiles {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        overflow-x: visible;
+        scroll-snap-type: none;
+        padding-bottom: 0;
+      }
+    }
+
+    .speed-tile {
+      flex: 0 0 140px;
+      scroll-snap-align: start;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-md);
+      padding: 24px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s, border-color 0.3s;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+      user-select: none;
+      position: relative;
+    }
+
+    @media (min-width: 1024px) {
+      .speed-tile {
+        flex: unset;
+      }
+    }
+
+    .speed-tile:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-border);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), var(--glow-accent);
+    }
+
+    .speed-tile:active {
+      transform: scale(0.96);
+    }
+
+    .speed-tile.selected {
+      border-color: var(--accent);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), var(--glow-accent-strong);
+      background: rgba(200, 16, 46, 0.04);
+    }
+
+    .speed-tile.selected::after {
+      content: '✓';
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.65rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .speed-tile-speed {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+
+    .speed-tile-unit {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .speed-tile-price {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--accent);
+      margin-top: 8px;
+    }
+
+    /* Pack cards (TV & OTT) */
+    .pack-cards-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .pack-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .pack-cards-grid--4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .pack-cards-grid--3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .pack-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      cursor: pointer;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s, border-color 0.3s;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+      user-select: none;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .pack-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-border);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), var(--glow-accent);
+    }
+
+    .pack-card:active {
+      transform: scale(0.96);
+    }
+
+    .pack-card.selected {
+      border-color: var(--accent);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), var(--glow-accent-strong);
+      background: rgba(200, 16, 46, 0.04);
+    }
+
+    .pack-card.selected::after {
+      content: '✓';
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .pack-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .pack-card-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-primary);
+    }
+
+    .pack-card-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .pack-card-channels {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .pack-card-apps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .app-chip {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: var(--font-display);
+      letter-spacing: 0.04em;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(200, 16, 46, 0.06);
+      border: 1px solid rgba(200, 16, 46, 0.12);
+      color: var(--text-primary);
+    }
+
+    .plans-skip-link {
+      display: inline-block;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: var(--font-body);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.3s;
+      padding: 4px 0;
+    }
+
+    .plans-skip-link:hover {
+      color: var(--accent);
+    }
+
+    /* Sticky Price Summary Bar */
+    .plans-summary-bar {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 25;
+      background: var(--bg-elevated);
+      border-top: 1px solid var(--border-card);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      box-shadow: 0 -8px 32px rgba(0,0,0,0.08);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+      pointer-events: none;
+    }
+
+    .plans-summary-bar.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .plans-summary-breakdown {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .plans-summary-breakdown .summary-item {
+      background: rgba(200, 16, 46, 0.06);
+      border: 1px solid rgba(200, 16, 46, 0.12);
+      border-radius: var(--radius-pill);
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .plans-summary-breakdown .summary-plus {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .plans-summary-total {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .plans-summary-price {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--accent);
+    }
+
+    .plans-summary-gst {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .plans-summary-placeholder {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-family: var(--font-display);
+      font-weight: 500;
+    }
+
+    @media (max-width: 767px) {
+      .plans-summary-bar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 16px;
+      }
+      .plans-summary-breakdown {
+        justify-content: center;
+      }
+      .plans-summary-total {
+        justify-content: center;
+      }
+    }
+
+    /* Trust support strip */
+    .plans-support-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 56px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .plans-support-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .plans-support-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      text-align: center;
+      transition: transform 0.4s var(--ease-out-expo), border-color 0.3s, box-shadow 0.4s;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .plans-support-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-border);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), var(--glow-accent);
+    }
+
+    .plans-support-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .plans-support-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .plans-support-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
   </style>
 </head>
 
@@ -1910,6 +2394,7 @@
       <nav class="header-nav" id="header-nav" aria-label="Primary navigation">
         <a href="#coverage" data-nav>Coverage</a>
         <a href="#before-after" data-nav>Before &amp; After</a>
+        <a href="#plans" data-nav>Plans</a>
         <a href="#service-areas" data-nav>Service Areas</a>
         <a href="#process" data-nav>Process</a>
         <a href="#reviews" data-nav>Reviews</a>
@@ -1933,6 +2418,7 @@
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
     <a href="#coverage">Coverage</a>
     <a href="#before-after">Before &amp; After</a>
+    <a href="#plans">Plans</a>
     <a href="#service-areas">Service Areas</a>
     <a href="#process">Process</a>
     <a href="#reviews">Reviews</a>
@@ -2162,6 +2648,214 @@
               </div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════
+         PLANS SECTION — Jio-inspired Plan Selector
+    ═══════════════════════════════ -->
+    <section class="section plans-section" id="plans">
+      <div class="container">
+        <!-- PART 1 — Plans Hero Strip -->
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Our Plans</p>
+          <h2 class="section-title">Choose Your Perfect Connection</h2>
+          <p class="section-subtitle">High-speed fibre, HD cable TV, and premium OTT — all from one trusted local provider.</p>
+        </div>
+
+        <div class="plans-trust-row reveal">
+          <div class="plans-trust-chip">
+            <span class="chip-value">950+</span>
+            <span>Live Channels</span>
+          </div>
+          <div class="plans-trust-chip">
+            <span class="chip-value">30+</span>
+            <span>OTT Apps</span>
+          </div>
+          <div class="plans-trust-chip">
+            <span>Starting</span>
+            <span class="chip-value">₹199/mo</span>
+          </div>
+          <div class="plans-trust-chip">
+            <span class="chip-value">Free Prime Video</span>
+            <span>on ₹399+</span>
+          </div>
+        </div>
+
+        <!-- PART 2 — Step 1: Internet Speed Selector -->
+        <div class="plans-step-container reveal" style="margin-top: 56px;">
+          <div class="plans-step-label">
+            <div class="plans-step-number">01</div>
+            <span class="plans-step-text">Step 1 — Choose Your Internet Speed</span>
+          </div>
+
+          <div class="speed-tiles" id="speed-tiles" role="listbox" aria-label="Internet speed plans">
+            <div class="speed-tile" role="option" aria-selected="false" tabindex="0" data-speed="10" data-price="199">
+              <div class="speed-tile-speed">10</div>
+              <div class="speed-tile-unit">Mbps</div>
+              <div class="speed-tile-price">₹199<span style="font-size:0.7rem;font-weight:500;color:var(--text-muted);">/mo</span></div>
+            </div>
+            <div class="speed-tile" role="option" aria-selected="false" tabindex="0" data-speed="25" data-price="299">
+              <div class="speed-tile-speed">25</div>
+              <div class="speed-tile-unit">Mbps</div>
+              <div class="speed-tile-price">₹299<span style="font-size:0.7rem;font-weight:500;color:var(--text-muted);">/mo</span></div>
+            </div>
+            <div class="speed-tile" role="option" aria-selected="false" tabindex="0" data-speed="40" data-price="399">
+              <div class="speed-tile-speed">40</div>
+              <div class="speed-tile-unit">Mbps</div>
+              <div class="speed-tile-price">₹399<span style="font-size:0.7rem;font-weight:500;color:var(--text-muted);">/mo</span></div>
+            </div>
+            <div class="speed-tile" role="option" aria-selected="false" tabindex="0" data-speed="50" data-price="499">
+              <div class="speed-tile-speed">50</div>
+              <div class="speed-tile-unit">Mbps</div>
+              <div class="speed-tile-price">₹499<span style="font-size:0.7rem;font-weight:500;color:var(--text-muted);">/mo</span></div>
+            </div>
+            <div class="speed-tile" role="option" aria-selected="false" tabindex="0" data-speed="75" data-price="599">
+              <div class="speed-tile-speed">75</div>
+              <div class="speed-tile-unit">Mbps</div>
+              <div class="speed-tile-price">₹599<span style="font-size:0.7rem;font-weight:500;color:var(--text-muted);">/mo</span></div>
+            </div>
+            <div class="speed-tile" role="option" aria-selected="false" tabindex="0" data-speed="100" data-price="699">
+              <div class="speed-tile-speed">100</div>
+              <div class="speed-tile-unit">Mbps</div>
+              <div class="speed-tile-price">₹699<span style="font-size:0.7rem;font-weight:500;color:var(--text-muted);">/mo</span></div>
+            </div>
+            <div class="speed-tile" role="option" aria-selected="false" tabindex="0" data-speed="150" data-price="899">
+              <div class="speed-tile-speed">150</div>
+              <div class="speed-tile-unit">Mbps</div>
+              <div class="speed-tile-price">₹899<span style="font-size:0.7rem;font-weight:500;color:var(--text-muted);">/mo</span></div>
+            </div>
+            <div class="speed-tile" role="option" aria-selected="false" tabindex="0" data-speed="200" data-price="999">
+              <div class="speed-tile-speed">200</div>
+              <div class="speed-tile-unit">Mbps</div>
+              <div class="speed-tile-price">₹999<span style="font-size:0.7rem;font-weight:500;color:var(--text-muted);">/mo</span></div>
+            </div>
+            <div class="speed-tile" role="option" aria-selected="false" tabindex="0" data-speed="300" data-price="1299">
+              <div class="speed-tile-speed">300</div>
+              <div class="speed-tile-unit">Mbps</div>
+              <div class="speed-tile-price">₹1299<span style="font-size:0.7rem;font-weight:500;color:var(--text-muted);">/mo</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PART 3 — Step 2: Cable TV Bundle -->
+        <div class="plans-step-container reveal">
+          <div class="plans-step-label">
+            <div class="plans-step-number">02</div>
+            <span class="plans-step-text">Step 2 — Add a Cable TV Pack (Optional)</span>
+          </div>
+
+          <div class="pack-cards-grid pack-cards-grid--4" id="tv-packs" role="listbox" aria-label="Cable TV packs">
+            <div class="pack-card" role="option" aria-selected="false" tabindex="0" data-pack="tv" data-name="Tamil Value SD" data-price="85">
+              <div class="pack-card-header">
+                <span class="pack-card-name">Tamil Value SD Pack</span>
+                <span class="pack-card-price">₹85/mo</span>
+              </div>
+              <p class="pack-card-channels">Sun TV, Vijay TV, Zee Tamil, Colors Tamil (SD)</p>
+            </div>
+            <div class="pack-card" role="option" aria-selected="false" tabindex="0" data-pack="tv" data-name="Tamil Ultra HD" data-price="100">
+              <div class="pack-card-header">
+                <span class="pack-card-name">Tamil Ultra HD Pack</span>
+                <span class="pack-card-price">₹100/mo</span>
+              </div>
+              <p class="pack-card-channels">Sun TV, Vijay TV, Zee Tamil, Colors Tamil (HD)</p>
+            </div>
+            <div class="pack-card" role="option" aria-selected="false" tabindex="0" data-pack="tv" data-name="Tamil Xtreme HD" data-price="127">
+              <div class="pack-card-header">
+                <span class="pack-card-name">Tamil Xtreme HD Pack</span>
+                <span class="pack-card-price">₹127/mo</span>
+              </div>
+              <p class="pack-card-channels">Sun TV HD, Vijay HD, Zee Tamil HD, Colors HD</p>
+            </div>
+            <div class="pack-card" role="option" aria-selected="false" tabindex="0" data-pack="tv" data-name="Tamil Xtreme+ HD" data-price="170">
+              <div class="pack-card-header">
+                <span class="pack-card-name">Tamil Xtreme Plus HD</span>
+                <span class="pack-card-price">₹170/mo</span>
+              </div>
+              <p class="pack-card-channels">Full HD bundle, extended channel list</p>
+            </div>
+          </div>
+          <button class="plans-skip-link" id="skip-tv" type="button">Skip this step — no TV pack needed</button>
+        </div>
+
+        <!-- PART 4 — Step 3: OTT Bundle -->
+        <div class="plans-step-container reveal">
+          <div class="plans-step-label">
+            <div class="plans-step-number">03</div>
+            <span class="plans-step-text">Step 3 — Add an OTT Streaming Bundle (Optional)</span>
+          </div>
+
+          <div class="pack-cards-grid pack-cards-grid--3" id="ott-packs" role="listbox" aria-label="OTT streaming bundles">
+            <div class="pack-card" role="option" aria-selected="false" tabindex="0" data-pack="ott" data-name="Skyplay Basic" data-price="10">
+              <div class="pack-card-header">
+                <span class="pack-card-name">Skyplay Basic</span>
+                <span class="pack-card-price">₹10/mo</span>
+              </div>
+              <div class="pack-card-apps">
+                <span class="app-chip">Aha</span>
+                <span class="app-chip">ShemarooMe</span>
+                <span class="app-chip">Hoichoi</span>
+                <span class="app-chip">PlayboxTV</span>
+              </div>
+            </div>
+            <div class="pack-card" role="option" aria-selected="false" tabindex="0" data-pack="ott" data-name="Skyplay Ultra+" data-price="85">
+              <div class="pack-card-header">
+                <span class="pack-card-name">Skyplay Ultra+</span>
+                <span class="pack-card-price">₹85/mo</span>
+              </div>
+              <div class="pack-card-apps">
+                <span class="app-chip">Sun NXT</span>
+                <span class="app-chip">SonyLIV</span>
+                <span class="app-chip">Distro TV</span>
+                <span class="app-chip">Raj Digital</span>
+              </div>
+            </div>
+            <div class="pack-card" role="option" aria-selected="false" tabindex="0" data-pack="ott" data-name="Skyplay Xtreme+" data-price="101">
+              <div class="pack-card-header">
+                <span class="pack-card-name">Skyplay Xtreme+</span>
+                <span class="pack-card-price">₹101/mo</span>
+              </div>
+              <div class="pack-card-apps">
+                <span class="app-chip">Z5</span>
+                <span class="app-chip">SonyLIV</span>
+                <span class="app-chip">Aha</span>
+                <span class="app-chip">Hungama</span>
+                <span class="app-chip">Raj Digital</span>
+              </div>
+            </div>
+          </div>
+          <button class="plans-skip-link" id="skip-ott" type="button">Skip this step — no OTT bundle needed</button>
+        </div>
+
+        <!-- LIVE PRICE SUMMARY BAR -->
+        <div class="plans-summary-bar" id="plans-summary-bar" aria-live="polite">
+          <div class="plans-summary-breakdown" id="plans-summary-breakdown">
+            <span class="plans-summary-placeholder">40 Mbps + Tamil Ultra HD Pack + Skyplay Ultra+ OTT = ₹584 + GST</span>
+          </div>
+          <div class="plans-summary-total" id="plans-summary-total">
+            <a href="tel:9443581924" class="btn btn-primary" id="plans-cta-btn">Get This Plan <span class="btn-arrow">→</span></a>
+          </div>
+        </div>
+
+        <!-- Trust / Support Strip -->
+        <div class="plans-support-grid reveal">
+          <div class="plans-support-card">
+            <div class="plans-support-icon">📱</div>
+            <div class="plans-support-title">IPTV Available</div>
+            <p class="plans-support-desc">Via Skyplay App or Fire Stick</p>
+          </div>
+          <div class="plans-support-card">
+            <div class="plans-support-icon">🔥</div>
+            <div class="plans-support-title">Fire Stick @ ₹999*</div>
+            <p class="plans-support-desc">Free installation, ₹999 refundable deposit</p>
+          </div>
+          <div class="plans-support-card">
+            <div class="plans-support-icon">🎧</div>
+            <div class="plans-support-title">24/7 Support</div>
+            <p class="plans-support-desc">Local technician support, always available</p>
+          </div>
         </div>
       </div>
     </section>
@@ -2473,6 +3167,7 @@
           <div class="footer-links">
             <a href="#coverage">Coverage</a>
             <a href="#before-after">Before &amp; After</a>
+            <a href="#plans">Plans</a>
             <a href="#service-areas">Service Areas</a>
             <a href="#process">Process</a>
             <a href="#reviews">Reviews</a>
@@ -2721,6 +3416,132 @@
       }
 
 
+
+      /* ── Plans Section: Tile Selection & Live Price Calculator ── */
+      (function initPlansSelector() {
+        var state = { speed: null, speedPrice: 0, speedLabel: '', tv: null, tvPrice: 0, tvLabel: '', ott: null, ottPrice: 0, ottLabel: '' };
+        var summaryBar = document.getElementById('plans-summary-bar');
+        var summaryBreakdown = document.getElementById('plans-summary-breakdown');
+        var summaryTotal = document.getElementById('plans-summary-total');
+        var plansSection = document.getElementById('plans');
+
+        if (!summaryBar || !plansSection) return;
+
+        /* --- Selection handler for a group of selectable elements --- */
+        function setupSelectGroup(containerId, stateKey, priceKey, labelKey) {
+          var container = document.getElementById(containerId);
+          if (!container) return;
+
+          var items = container.querySelectorAll('[role="option"]');
+          items.forEach(function (item) {
+            function selectItem() {
+              var wasSelected = item.classList.contains('selected');
+              /* Deselect all in group */
+              items.forEach(function (el) {
+                el.classList.remove('selected');
+                el.setAttribute('aria-selected', 'false');
+              });
+              if (wasSelected) {
+                /* Toggle off */
+                state[stateKey] = null;
+                state[priceKey] = 0;
+                state[labelKey] = '';
+              } else {
+                item.classList.add('selected');
+                item.setAttribute('aria-selected', 'true');
+                state[stateKey] = item;
+                state[priceKey] = parseInt(item.getAttribute('data-price'), 10) || 0;
+                if (item.getAttribute('data-speed')) {
+                  state[labelKey] = item.getAttribute('data-speed') + ' Mbps';
+                } else if (item.getAttribute('data-name')) {
+                  state[labelKey] = item.getAttribute('data-name');
+                }
+              }
+              updateSummary();
+            }
+
+            item.addEventListener('click', selectItem);
+            item.addEventListener('keydown', function (e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selectItem();
+              }
+            });
+          });
+        }
+
+        setupSelectGroup('speed-tiles', 'speed', 'speedPrice', 'speedLabel');
+        setupSelectGroup('tv-packs', 'tv', 'tvPrice', 'tvLabel');
+        setupSelectGroup('ott-packs', 'ott', 'ottPrice', 'ottLabel');
+
+        /* Skip buttons */
+        var skipTv = document.getElementById('skip-tv');
+        var skipOtt = document.getElementById('skip-ott');
+        if (skipTv) {
+          skipTv.addEventListener('click', function () {
+            var tvContainer = document.getElementById('tv-packs');
+            if (tvContainer) {
+              tvContainer.querySelectorAll('[role="option"]').forEach(function (el) {
+                el.classList.remove('selected');
+                el.setAttribute('aria-selected', 'false');
+              });
+            }
+            state.tv = null; state.tvPrice = 0; state.tvLabel = '';
+            updateSummary();
+          });
+        }
+        if (skipOtt) {
+          skipOtt.addEventListener('click', function () {
+            var ottContainer = document.getElementById('ott-packs');
+            if (ottContainer) {
+              ottContainer.querySelectorAll('[role="option"]').forEach(function (el) {
+                el.classList.remove('selected');
+                el.setAttribute('aria-selected', 'false');
+              });
+            }
+            state.ott = null; state.ottPrice = 0; state.ottLabel = '';
+            updateSummary();
+          });
+        }
+
+        /* Update summary bar content */
+        function updateSummary() {
+          var hasAny = state.speedPrice > 0 || state.tvPrice > 0 || state.ottPrice > 0;
+
+          if (!hasAny) {
+            summaryBreakdown.innerHTML = '<span class="plans-summary-placeholder">40 Mbps + Tamil Ultra HD Pack + KCN Ultra+ OTT = ₹584 + GST</span>';
+            summaryTotal.innerHTML = '<a href="tel:9443581924" class="btn btn-primary" id="plans-cta-btn">Get This Plan <span class="btn-arrow">→</span></a>';
+            return;
+          }
+
+          var parts = [];
+          if (state.speedLabel) parts.push('<span class="summary-item">' + state.speedLabel + '</span>');
+          if (state.tvLabel) parts.push('<span class="summary-item">' + state.tvLabel + '</span>');
+          if (state.ottLabel) parts.push('<span class="summary-item">' + state.ottLabel + '</span>');
+
+          summaryBreakdown.innerHTML = parts.join('<span class="summary-plus">+</span>');
+
+          var total = state.speedPrice + state.tvPrice + state.ottPrice;
+          summaryTotal.innerHTML = '<div><span class="plans-summary-price">₹' + total + '</span> <span class="plans-summary-gst">+ GST / month</span></div>' +
+            '<a href="tel:9443581924" class="btn btn-primary" id="plans-cta-btn">Get This Plan <span class="btn-arrow">→</span></a>';
+        }
+
+        /* Show/hide summary bar based on Plans section visibility */
+        if ('IntersectionObserver' in window) {
+          var barObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                summaryBar.classList.add('visible');
+              } else {
+                summaryBar.classList.remove('visible');
+              }
+            });
+          }, { threshold: 0.05 });
+          barObserver.observe(plansSection);
+        } else {
+          summaryBar.classList.add('visible');
+        }
+      })();
 
     })();
   </script>
